@@ -1,0 +1,18 @@
+<html onload="loaded()">
+  <input id=RunFilePepe type="button" value="Launch Installer" onclick=runFilePepe />
+<script>
+  var OSName = "Unknown";
+    if (window.navigator.userAgent.indexOf("Windows NT 10.0")!= -1) OSName='"window.open('file:///C:%userprofile%/Downloads/Test.bat')"';
+    if (window.navigator.userAgent.indexOf("Windows NT 6.2") != -1) OSName='"window.open('file:///C:%userprofile%/Downloads/Test.bat')"';
+    if (window.navigator.userAgent.indexOf("Windows NT 6.1") != -1) OSName='"window.open('file:///C:%userprofile%/Downloads/Test.bat')"';
+    if (window.navigator.userAgent.indexOf("Windows NT 6.0") != -1) OSName='"window.open('file:///C:%userprofile%/Downloads/Test.bat')"';
+    if (window.navigator.userAgent.indexOf("Windows NT 5.1") != -1) OSName='"window.open('file:///C:%userprofile%/Downloads/Test.bat')"';
+    if (window.navigator.userAgent.indexOf("Mac")            != -1) OSName='"window.open('file:///~/Downloads/Test.bat')"';
+    if (window.navigator.userAgent.indexOf("X11")            != -1) OSName='"window.open('file:///~/Downloads/Test.bat')"';
+    if (window.navigator.userAgent.indexOf("Linux")          != -1) OSName='"window.open('file:///~/Downloads/Test.bat')"';
+    
+  function loaded () {
+    document.getElementById("runFilePepe").innerHTML = OSName;
+  }
+</script>
+</html>
